@@ -1,0 +1,305 @@
+@use "../_setting" as s;
+
+#wrapper,#wpwrap {
+	.benefitsPublicWelfareBox{
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		flex-wrap:wrap;
+		&>div{
+			width:48%;
+			background:#EBEBEB;
+			margin-block-start: 0;
+			margin:0 0 0.8em;
+			max-width:100%;
+			text-align:center;
+			padding:2em 1em;
+			@include s.media(m){
+				width:23.5%;
+				margin:0 0 1.3em;
+			}
+			&:nth-child(5){
+				width:98.5%;
+				@include s.media(m){
+					width:98.5%;
+				}
+			}
+			figure{
+				margin-bottom:0.5em;
+				width:4em;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			img{
+				width:100%;
+				height:auto;
+			}
+			p{
+				margin-block-start: 0;
+				margin-bottom:0;
+				&:nth-child(2){
+					font-size:1.19em;
+					font-family: "Noto Sans JP", sans-serif;
+					font-optical-sizing: auto;
+					font-weight: 800;
+					font-style: normal;
+					margin-bottom:0;
+				}
+				&:nth-child(3){
+					font-family: "Noto Sans JP", sans-serif;
+					font-optical-sizing: auto;
+					font-weight: 600;
+					font-style: normal;
+					line-height:1.6;
+					@include s.media(m){
+						font-size:1.1em;
+					}
+				}
+			}
+		}
+	}
+	.benefitsOutsideWelfareBox{
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		flex-wrap:wrap;
+		@include s.media(m){
+			border-bottom:#E0E0E0 solid 1px;
+			margin-bottom:2em;
+		}
+		&>div{
+			width:100%;
+			margin-block-start: 0;
+			margin:0 0 0.8em;
+			max-width:100%;
+			padding:0 1em;
+			position:relative;
+			padding-left:8em;
+			margin-left: 0 !important;
+   			margin-right: 0 !important;
+			@include s.media(m){
+				width:48%;
+				margin:0 0 1.3em;
+				padding-left:10em;
+			}
+			&>figure{
+				width:6em;
+				display:block;
+				position:absolute;
+				top:0;
+				left:0;
+				@include s.media(m){
+					width:7em;
+				}
+				img{
+					width:100%;
+					height:auto;
+				}
+			}
+			h4{
+				background:#C6C6C6;
+				border-radius:0.3em;
+				font-family: "Noto Sans JP", sans-serif;
+				font-optical-sizing: auto;
+				font-weight: 800;
+				font-style: normal;
+				font-size:1.1em;
+				padding:0.5em 1em;
+				text-align:center;
+				display:block;
+				border:none;
+				letter-spacing:0.1em;
+				&::before {
+					content:none;
+				}
+			}
+			ul{
+				li{
+					padding-left:1.8em;
+					&:before {
+						content:"";
+						width:1.3em;
+						height:1.3em;
+						display:block;
+						background:url(../img/benefits/iconCheck.svg) no-repeat center top;
+						background-size:100% auto;
+						position:absolute;
+						top:0.3em;
+						left:0;
+					}
+					strong{
+						font-family: "Noto Sans JP", sans-serif;
+						font-optical-sizing: auto;
+						font-weight: 600;
+						font-style: normal;
+						font-size:1.1em;
+						display:block;
+					}
+				}
+			}
+		}
+	}
+	.benefitsCommentsTitleBox{
+		display:block;
+		width:112%;
+		position:relative;
+		margin-bottom:2.5em;
+		margin-left:-6%;
+		position:relaitve;
+		@include s.media(m){
+			width:100%;
+			margin-left:0;
+		}
+		&::before{
+			content:"";
+			width:0;
+			height:0;
+			border-right: 6em solid transparent;
+			border-top: 6em solid #FFF; 
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			margin-top:-2.5em;
+			@include s.media(m){
+				border-right: 10em solid transparent;
+				border-top: 10em solid #FFF; 
+			}
+		}
+		&>figure{
+			max-width:100%;
+			img{
+				width:100%;
+			}
+			&::before{
+				content:"";
+				width:100vw;
+				height:3em;
+				display:block;
+				background:rgba(#FFF,.6);
+				transform: skewX(25deg);
+				position:absolute;
+				//top:50%;
+				bottom:0;
+				left:49%;
+				margin-top:-2.5em;
+				@include s.media(m){
+					height:3em;
+					//margin-top:-4em;
+					left:59.5%;
+				}
+			}
+			&::after{
+				content:"";
+				width:100vw;
+				height:3em;
+				display:block;
+				background:rgba(#CE0000,.6);
+				transform: skewX(25deg);
+				position:absolute;
+				//top:50%;
+				left:50%;
+				bottom:-0.2em;
+				margin-top:-3em;
+				@include s.media(m){
+					height:3em;
+					//margin-top:-6em;
+					//margin-top:-1em;
+					left:60%;
+				}
+			}
+		}
+		&>h3{
+			display:inline-block;
+			font-size:1.4em;
+			border:none;
+			background:none;
+			color:#FFF;
+			position:absolute;
+			bottom:0.2em;
+			left:55%;
+			margin-top:-1em;
+			padding:0 0 0 0.5em;
+			@include s.media(m){
+				font-size:2em;
+				left:70%;
+				margin-top:-1.5em;
+				padding:0.2em 0 0 0.5em;
+				bottom:0;
+			}
+		}
+		&.--type02{
+			&::before{
+				border-right: none;
+				border-left: 6em solid transparent;
+				right:0;
+				left:unset;
+				@include s.media(m){
+					border-left: 10em solid transparent;
+				}
+			}
+			&>figure{
+				&::before{
+					left:auto;
+					right:49%;
+					@include s.media(m){
+						left:auto;
+						right:59.5%;
+					}
+				}
+				&::after{
+					left:auto;
+					right:50%;
+					@include s.media(m){
+						left:auto;
+						right:60%;
+					}
+				}
+			}
+			&>h3{
+				left:auto;
+				right:55%;
+				@include s.media(m){
+					left:auto;
+					right:70%;
+				}
+			}
+		}
+	}
+	.benefitsCommentsContentsBox{
+		display:block;
+		background:#F6F6F6;
+		padding:2em 2em 2em 2em;
+		margin-bottom:2em;
+		@include s.media(m){
+			width:90%;
+			margin-left:auto;
+			margin-right:auto;
+			padding:2em 2em 2em 4em;
+		}
+		@include s.media(xl){
+			width:80%;
+		}
+		p{
+			display:block;
+			position:relative;
+			padding-left:2em;
+			@include s.media(m){
+				font-size:1.1em;
+				padding-left:4em;
+			}
+			em{
+				display:inline-block;
+				position:absolute;
+				top:0;
+				left:0;
+				font-style: normal;
+				font-size:1.2em;
+			}
+			&:nth-child(1){
+				border-bottom:#D0D0D0 solid 1px;
+				padding-bottom:1em;
+			}
+		}
+	}
+}

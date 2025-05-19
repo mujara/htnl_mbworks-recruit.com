@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="●サイトの検索キーワード●" />
+<meta name="description" content="●サイトの検索説明●" />
+<title>●サイトのタイトル●</title>
+<meta property="og:url" content="●ページの URL●" />
+<meta property="og:type" content="●ページの種類●website article" />
+<meta property="og:title" content="●ページの タイトル●" />
+<meta property="og:description" content="●ページの説明文●" />
+<meta property="og:site_name" content="●サイト名●" />
+<meta property="og:image" content="●サムネイル画像のURL●" />
+<meta name="apple-mobile-web-app-title" content="●iOS表示名●" />
+<meta name="author" content="●作者名●" />
+<link rel="apple-touch-icon" href="iphone.png">
+<link rel="stylesheet" href="css/import.css" media="all" />
+
+<!-- ローディング用 -->
+<script>
+window.onload = function() {
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+}
+</script>
+
+<!-- font 平成角ゴシック アドビフォント用 -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'tpr2wzk',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+<!-- font Futura フォントプラス用 -->
+<script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?gUwfYWZ-iOk%3D&box=tv71rugU4h8%3D&aa=1&ab=2"></script>
+
+<!-- google フォントプラス用 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body id="home" class="home">
+
+<!-- ローディング画面 -->
+<div id="loading">
+  <div class="spinner"></div>
+</div>
+
+
+<div id="wrapper">
+	<header id="header" class="clearfix">
+		<div class="header__headBox">
+			<div id="pageTopFix">
+				<div class="inBase clearfix">
+					<div class="header__inner">
+						<h1 class="header__siteTitle"><a href="<?php echo home_url(); ?>"><small>京都のMercedes-Benz専門店</small><b><img src="img/common/siteTitle.svg" alt="MBworks" /></b><span>整備士採用サイト</span></a></h1>
+						<nav class="globalNavi">
+							<ul class="globalNavi__menu__main clearfix">
+								<li><a href="<?php echo home_url(); ?>/aboutus"><span>ABOUT US</span><small>私たちについて</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/work"><span>WORK</span><small>仕事内容</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/culture"><span>CULTURE</span><small>社風・環境</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/benefits"><span>BENEFITS</span><small>福利厚生</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/interview"><span>INTERVIEW</span><small>スタッフインタビュー</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/message"><span>MESSAGE</span><small>代表挨拶</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/recruit"><span>GUIDELINE</span><small>募集要項</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/qa"><span>Q&A</span><small>よくあるご質問</small></a></li>
+								<li><a href="<?php echo home_url(); ?>/company"><span>COMPANY</span><small>会社概要</small></a></li>
+							</ul>
+							<div class="globalNavi__entry"><a href="<?php echo home_url(); ?>/recruit">職場見学・面接希望<br>はこちら</a></div>
+					    <!-- /.globalNavi --></nav>
+					<!-- /.header__inner --></div>
+				<!-- /.inBase --></div>
+			<!-- /#pageTopFix --></div>
+		
+			<nav class="globalNaviSmall">
+				<div id="globalNaviSmallIcon" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+					<div class="globalNaviSmall__iconButton">
+						<span class="iconButton--top"></span>
+						<span class="iconButton--middle"></span>
+						<span class="iconButton--bottom"></span>
+					</div>
+				</div>
+
+				<div class="modal micromodal-slide" id="modal-globalNaviSmall" aria-hidden="true">
+					<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				    		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-globalNaviSmall-labelledby">
+
+							<div class="globalNaviSmall__menu" id="modal-globalNaviSmall-labelledby">
+								<div class="globalNaviSmall__menu__inner">
+									<div class="globalNaviSmall__siteTitle">
+										<small>京都のMercedes-Benz専門店</small>
+										<img src="img/common/siteTitle_w.svg" alt="MBworks" />
+										<span>整備士採用サイト</span>
+									<!-- /.globalNaviSmall__siteTitle --></div>
+									<ul class="globalNaviSmall__menu__main">
+										<li><a href="<?php echo home_url(); ?>/aboutus"><span>ABOUT US</span><small>私たちについて</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/work"><span>WORK</span><small>仕事内容</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/culture"><span>CULTURE</span><small>社風・環境</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/benefits"><span>BENEFITS</span><small>福利厚生</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/interview"><span>INTERVIEW</span><small>スタッフインタビュー</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/message"><span>MESSAGE</span><small>代表挨拶</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/recruit"><span>GUIDELINE</span><small>募集要項</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/qa"><span>Q&A</span><small>よくあるご質問</small></a></li>
+										<li><a href="<?php echo home_url(); ?>/company"><span>COMPANY</span><small>会社概要</small></a></li>
+									</ul>
+									<div class="globalNaviSmall__entry"><a href="<?php echo home_url(); ?>/recruit">職場見学・面接希望<small>はこちら</small></a></div>
+								<!-- /.globalNaviSmall__menu__inner --></div>
+							<!-- /.globalNaviSmall__menu --></div>
+
+				    		<!-- /.modal__container --></div>
+					<!-- /.modal__overlay --></div>
+				<!-- /#modal-globalNaviSmall --></div>
+			<!-- /.globalNaviSmall --></nav>
+        	<!-- /.header__headBox --></div>
+	<!-- /#header --></header>
+    
+	<section class="mainVisual02 --typeScrollMoveIn">
+		<div class="inBase clearfix">
+
+					<div class="mainVisual02__bg">
+						<picture>
+							<source srcset="img/home/bgMainVisual01.jpg" media="(min-width: 768px)">
+							<img src="img/home/bgMainVisual01_sp.jpg" alt="京都のMercedes-Benz専門店 整備士募集">
+						</picture>
+					<!-- .mainVisual02__bg --></div>
+					<div class="mainVisual02__chachCopy">
+						<h2><img src="img/home/mainChach.svg" alt="整備士が一度は想像する理想の会社。" /></h2>
+					<!-- /.mainVisual02__chach --></div>
+					<figure class="mainVisual02__person"><img src="img/home/mainPerson02.png" alt="京都のMercedes-Benz専門店の整備士" /></figure>
+					<div class="mainVisual02__chachCopy">
+						<h2><img src="img/home/mainChach.svg" alt="整備士が一度は想像する理想の会社。" /></h2>
+						<h3><span><b>整備士</b>として働く</span>なら<br><figure><img src="img/common/siteTitle.svg" alt="MBworks" /></figure>へ。</h3>
+					<!-- /.mainVisual02__chach --></div>
+
+
+
+			<div class="mainVisual02__pointBox">
+				<ul>
+					<li>業界トップクラス！<br>圧倒的な福利厚生</li>
+					<li>ベンツオーナーになれる<br>サポートあり！</li>
+					<li>メルセデス・ベンツの<br>整備未経験でもOK！</li>
+				</ul>
+			<!-- /.mainVisual02__pointBox --></div>
+		<!-- /.inBase --></div>
+	<!-- /.mainVisual02 --></section>
+
+	<div class="wideRecruitButton --typeScrollMoveIn"><a href="<?php echo home_url(); ?>/recruit">職場見学・面接希望はこちら</a></div>
+	
+	<div id="contents" class="clearfix">
+		<div class="homeHeadMessageBox --typeScrollMoveIn">
+	    		<div class="inBase clearfix">
+				<figure class="homeHeadMessageBox__bg"><img src="img/home/bgMessage.jpg" alt="京都のMercedes-Benz専門店 整備士を志す方へ" /></figure>
+		    		<div class="homeHeadMessageBox__content">
+					<div class="homeHeadMessageBox__title"><small>Message</small><h3>整備士のあなたへ</h3></div>
+					<p>低い給与、長時間労働、悪い労働環境や人間関係<br>
+						あなたもこれらの問題に直面して転職を考える一人ではありませんか？</p>
+
+					<p>どこか整備士としての将来が見えない。<br>
+						どこか自分が大切にされていると思えない。<br>
+						技術を活かしたい、今よりもっと技術を磨きたい。</p>
+
+					<p>そんな自問自答の日々から抜け出しませんか？</p>
+
+					<p>あなたはもっと評価され、もっと大切にされる人材です。</p>
+
+					<p>現状を変えるために踏み出したその一歩は、<br>
+						あなたの未来を変える大きな一歩です。</p>
+
+					<p>私たちはスタッフを一番に考え、日本一働きやすい会社づくりを行います。</p>
+				<!-- /.homeHeadMessageBox__content --></div>
+			<!-- /.inBase --></div>
+		<!-- /.homeHeadMessageBox --></div>
+
+		<div class="homeAboutusBox">
+	    		<div class="inBase clearfix">
+					<div class="homeAboutusBox__bg --typeScrollMoveIn"><img src="img/home/bg02.png" alt="京都のMercedes-Benz専門店" /><!-- /.homeAboutusBox__bg --></div>
+					<figure class="homeAboutusBox__image --typeScrollMaskIn --typeParallax01">
+						<img src="img/home/imgWelfare.png" alt="福利厚生・募集要項" />
+					</figure>
+					<div class="homeAboutusBox__inner --typeParallax02">
+						<div class="--typeScrollLine --type03 sM">
+							<h3 class="sectionTitle--type02"><small>Welfare</small><b>福利厚生・募集要項</b></h3>
+		    		<!-- /.--typeScrollLine --></div>
+						<div class="homeAboutusBox__content --typeScrollFadeIn">
+							<p class="lead--type02 sM">業界最高クラスの福利厚生<br>働きやすさは安心とサポートから！</p>
+							<p class="sM-l">テキストテキストテキストテキストテキ<br>
+								テキストテキストテキストテキストテキスト<br>
+								テキストテキストテキストテキストテキストテキストテキスト<br>
+								テキストテキストテキストテキ<br><br>
+
+								テキストテキストテキストテキストテキスト<br>
+								テキストテキストテキストテキストテキストテキスト<br>
+								テキストテキストテキストテキ</p>
+						<!-- /.homeAboutusBox__content --></div>
+						<div class="button--type01"><a href="<?php echo home_url(); ?>/benefits"><span>福利厚生を見る</span></a></div>
+						<div class="button--type01"><a href="<?php echo home_url(); ?>/recruit"><span>募集要項を見る</span></a></div>
+		    		<!-- /.homeAboutusBox__inner --></div>
+		    	<!-- /.inBase --></div>
+	    	<!-- /.homeAboutusBox --></div>
+
+		<div class="homeCompanyCultureBox clearfix">
+    	<div class="inBase clearfix">
+				<div class="homeCompanyCultureBox__bg --typeScrollMoveIn"><img src="img/home/bg03.png" alt="京都のMercedes-Benz専門店" /><!-- /.homeCompanyCultureBox__bg --></div>
+				<figure class="homeCompanyCultureBox__image --typeScrollMaskIn --typeParallax01">
+					<img src="img/home/imgCulture.png" alt="社風・環境" />
+				</figure>
+				<div class="--typeScrollFadeIn">
+				<div class="homeCompanyCultureBox__inner --typeParallax02">
+					<div class="--typeScrollLine --type03 sM sM-pc-l">
+						<h3 class="sectionTitle--type02"><small>Company culture</small><b>社風・環境</b></h3>
+	    		<!-- /.--typeScrollLine --></div>
+
+					<div class="homeCompanyCultureBox__content">
+						<p class="lead--type02 sM">自分を、家族を優先に<br>自分を、仲間を大切に</p>
+						<p class="sM-l">テキストテキストテキストテキストテキ<br>
+							テキストテキストテキストテキストテキスト<br>
+							テキストテキストテキストテキストテキストテキストテキスト<br>
+							テキストテキストテキストテキ<br><br>
+
+							テキストテキストテキストテキストテキスト<br>
+							テキストテキストテキストテキストテキストテキスト<br>
+							テキストテキストテキストテキ</p>
+					<!-- /.homeCompanyCultureBox__content --></div>
+					<div class="button--type01"><a href="<?php echo home_url(); ?>/culture"><span>社風・環境を知る</span></a></div>
+	    		<!-- /.homeCompanyCultureBox__inner --></div>
+	    	<!-- /.--typeScrollFadeIn --></div>
+	    	<!-- /.inBase --></div>
+    	<!-- /.homeCompanyCultureBox --></div>
+
+
+
+		<div class="homeInterviewBox clearfix --typeParallax02">
+    	<div class="inBase --spBg clearfix">
+				<div class="homeInterviewBox__bg --typeScrollMoveIn"><img src="img/home/bg04.png" alt="京都のMercedes-Benz専門店"/><!-- /.homeInterviewBox__bg --></div>
+				
+				<div class="--typeScrollLine --type03 sM">
+					<h3 class="sectionTitle--type01 tC-onlySp"><small>スタッフインタビュー</small><b>INTERVIEW</b></h3>
+	    	<!-- /.--typeScrollLine --></div>
+
+				<div class="homeInterviewBox__inner clearfix --typeScrollMaskIn2">
+
+
+
+
+
+
+
+
+
+<!-- スライダーここから -->
+<div class="sliderBox--typeChangeSlide">
+<div class="inBase">
+<div class="homeJobBox__inner">
+<!-- Slider全体のコンテナ -->
+<div class="swiper">
+    <!-- Sliderの内包コンテナ -->
+    <div class="swiper-wrapper">
+        <!-- Slideさせたいコンテンツ -->
+
+        <div class="swiper-slide">
+					<div class="homeInterviewBox__staffBox --type01 sM">
+						<a href="#">
+							<figure><img src="img/home/imgInterview01.jpg" alt="●●●●" /></figure>
+							<dl>
+								<dt class="sM-s">テキストテキストテキストテキストテキストテキストテキストテキスト</dt>
+								<dd>整備士　何年目　イニシャル</dd>
+							</dl>
+						</a>
+					<!-- /.homeInterviewBox__staffBox --></div>
+        <!-- /.swiper-slide --></div>
+
+
+        <div class="swiper-slide">
+					<div class="homeInterviewBox__staffBox --type02 sM">
+						<a href="#">
+							<figure><img src="img/home/imgInterview02.jpg" alt="●●●●" /></figure>
+							<dl>
+								<dt class="sM-s">MBworksでの1年は他社と比べて10倍違う</dt>
+								<dd>整備士　何年目　イニシャル</dd>
+							</dl>
+						</a>
+					<!-- /.homeInterviewBox__staffBox --></div>
+        <!-- /.swiper-slide --></div>
+
+
+
+        <div class="swiper-slide">
+					<div class="homeInterviewBox__staffBox --type03 sM">
+						<a href="#">
+							<figure><img src="img/home/imgInterview03.jpg" alt="●●●●" /></figure>
+							<dl>
+								<dt class="sM-s">テキストテキストテキストテキストテキストテキスト</dt>
+								<dd>整備士　何年目　イニシャル</dd>
+							</dl>
+						</a>
+					<!-- /.homeInterviewBox__staffBox --></div>
+        <!-- /.swiper-slide --></div>
+
+
+
+    <!-- /.swiper-wrapper --></div>
+    <!-- ナビゲーションボタン（※省略可） -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+
+<!-- /.swiper --></div>
+<!-- Sliderここまで -->
+<!-- /.homeJobkBox__inner --></div>
+<!-- /.inBase --></div>
+<!-- /.sliderBox--typeChangeSlide --></div>
+<!-- スライダーここまで -->
+
+
+
+
+
+
+
+
+
+
+
+
+	    	<!-- /.homeInterviewBox__inner --></div>
+
+				<div class="button--type01 --typeScrollFadeIn --typeParallax02 tR"><a href="interview.html"><span>Interview</span></a></div>
+	    	<!-- /.inBase --></div>
+    	<!-- /.homeInterviewBox --></div>
+
+		<div class="homeMessageBox">
+    		<div class="inBase clearfix">
+				<div class="homeMessageBox__inner sM-l --typeParallax02">
+					<div class="--typeScrollLine --type03 sM sM-pc-l">
+						<h3 class="sectionTitle--type01 tC-onlySp"><small>代表挨拶</small><b>MESSAGE</b></h3>
+	    		<!-- /.--typeScrollLine --></div>
+				<figure class="homeMessageBox__image sM --isSP"><img src="img/home/imgRepresentative.jpg" alt="MBworks代表" /></figure>
+	    		<div class="--typeScrollFadeIn">
+						<p class="lead--type01 sM">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="sM-l">MBworksは京都に店舗を構えるMercedes-Benzの専門店です！<br>
+							ベンツ整備、修理、カスタムで関西No.１のお店を目指しており、
+							あなたの挑戦を応援できる仲間と設備を整えています。<br>
+							MBworksで第二ステージを始めてみませんか</p>
+						<div class="button--type01"><a href="message.html"><span>Message</span></a></div>
+	    		<!-- /.--typeScrollFadeIn --></div>
+	    		<!-- /.homeMessageBox__inner --></div>
+				<figure class="homeMessageBox__image sM --typeScrollMaskIn --typeParallax01 --isPC"><img src="img/home/imgRepresentative.jpg" alt="MBworks代表" /></figure>
+	    	<!-- /.inBase --></div>
+    	<!-- /.homeMessageBox --></div>
+
+
+		<div class="homeAboutusBox">
+    	<div class="inBase clearfix">
+				<div class="homeAboutusBox__bg --typeScrollMoveIn"><img src="img/home/bg02.png" alt="京都のMercedes-Benz専門店" /><!-- /.homeAboutusBox__bg --></div>
+				<figure class="homeAboutusBox__image --typeScrollMaskIn --typeParallax01">
+					<img src="img/home/imgAboutUs2.png" alt="私たちについて" />
+				</figure>
+				<div class="homeAboutusBox__inner --typeParallax02">
+					<div class="--typeScrollLine --type03 sM sM-pc-l">
+						<h3 class="sectionTitle--type01"><small>私たちについて</small><b>ABOUT US</b></h3>
+	    		<!-- /.--typeScrollLine --></div>
+					<div class="homeAboutusBox__content --typeScrollFadeIn">
+						<p class="lead--type01 sM">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="sM-l">MBworksは京都に店舗を構えるMercedes-Benzの専門店です！<br>
+							ベンツ整備、修理、カスタムで関西No.１のお店を目指しており、<br class="hidden-sp">
+							あなたの挑戦を応援できる仲間と設備を整えています。<br>
+							MBworksで第二ステージを始めてみませんか</p>
+					<!-- /.homeAboutusBox__content --></div>
+					<div class="button--type01"><a href="aboutus.html"><span>About Us</span></a></div>
+	    		<!-- /.homeAboutusBox__inner --></div>
+	    	<!-- /.inBase --></div>
+    	<!-- /.homeAboutusBox --></div>
+
+		<div class="homeWorkBox clearfix">
+    	<div class="inBase clearfix">
+				<div class="homeWorkBox__bg --typeScrollMoveIn"><img src="img/home/bg03.png" alt="京都のMercedes-Benz専門店" /><!-- /.homeWorkBox__bg --></div>
+				<figure class="homeWorkBox__image --typeScrollMaskIn --typeParallax01">
+					<img src="img/home/imgWork.png" alt="仕事内容" />
+				</figure>
+				<div class="--typeScrollFadeIn">
+				<div class="homeWorkBox__inner --typeParallax02">
+					<div class="--typeScrollLine --type03 sM sM-pc-l">
+						<h3 class="sectionTitle--type01"><small>仕事内容</small><b>WORK</b></h3>
+	    		<!-- /.--typeScrollLine --></div>
+
+					<div class="homeWorkBox__content">
+						<p class="lead--type01 sM">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="sM-l">MBworksは京都に店舗を構えるMercedes-Benzの専門店です！<br>
+ベンツ整備、修理、カスタムで関西No.１のお店を目指しており、
+あなたの挑戦を応援できる仲間と設備を整えています。<br>
+MBworksで第二ステージを始めてみませんか</p>
+					<!-- /.homeWorkBox__content --></div>
+					<div class="button--type01"><a href="work.html"><span>Work</span></a></div>
+	    		<!-- /.homeWorkBox__inner --></div>
+	    	<!-- /.--typeScrollFadeIn --></div>
+	    	<!-- /.inBase --></div>
+    	<!-- /.homeWorkBox --></div>
+
+		<div class="homeInformationBox clearfix">
+    		<div class="inBase clearfix">
+				<div class="homeInformationBox__bg --typeScrollMoveIn"><img src="img/home/bg06.png" alt="京都のMercedes-Benz専門店" /><!-- /.homeAboutusBox__bg --></div>
+				<div class="homeInformationBox__inner sM-xl --typeParallax02">
+					<div class="--typeScrollLine --type04 sM">
+						<h3 class="sectionTitle--type01 tC"><small>会社概要</small><b>INFORMATION</b></h3>
+	    		<!-- /.--typeScrollLine --></div>
+	    		<div class="--typeScrollFadeIn">
+	    			<ul class="homeInformationBox__List01 sM">
+	    					<li><a href="#">
+	    						<figure>
+								<img src="img/home/imgData.jpg" alt="データで見る" />
+								<img src="img/home/imgData2.jpg" alt="データで見る" />
+							</figure>
+	    						<p><small>DATA</small><span>データで見る</span></p>
+	    					</a></li>
+	    					<li><a href="#">
+	    						<figure>
+								<img src="img/home/imgQandA.jpg" alt="よくある質問" />
+								<img src="img/home/imgQandA2.jpg" alt="よくある質問" />
+							</figure>
+	    						<p><small>Q&A</small><span>よくある質問</span></p>
+	    					</a></li>
+	    			</ul>
+	    		<!-- /.--typeScrollFadeIn --></div>
+	    		<div class="--typeScrollFadeIn">
+	    			<ul class="homeInformationBox__List01 sM">
+	    					<li><a href="#">
+	    						<figure>
+								<img src="img/home/imgCompany.jpg" alt="会社概要" />
+								<img src="img/home/imgCompany2.jpg" alt="会社概要" />
+							</figure>
+	    						<p><small>COMPANY</small><span>会社概要</span></p>
+	    					</a></li>
+	    					<li><a href="#">
+	    						<figure>
+								<img src="img/home/imgSite.jpg" alt="コーポレートサイト" />
+								<img src="img/home/imgSite2.jpg" alt="コーポレートサイト" />
+							</figure>
+	    						<p><small>CORPORATE SITE</small><span>コーポレートサイト</span></p>
+	    					</a></li>
+	    					<!--<li><a href="#">
+	    						<figure><img src="img/home/imgRecruit.jpg" alt="採用情報" /></figure>
+	    						<p><small>RECRUIT</small><span>採用情報</span></p>
+	    					</a></li>-->
+	    			</ul>
+	    		<!-- /.--typeScrollFadeIn --></div>
+	    		<!-- /.homeInformationBox__inner --></div>
+	    	<!-- /.inBase --></div>
+    	<!-- /.homeInformationBox --></div>
+
+		<div class="homeYouTubeBox clearfix sM-xl --typeParallax02">
+    		<div class="inBase clearfix">
+			<div class="homeYouTubeBox__inner">
+				<div class="--typeScrollLine --type04 sM-l">
+					<h3 class="sectionTitle--type01 tC"><b>YouTube</b></h3>
+				<!-- /.--typeScrollLine --></div>
+	    		<!-- /.homeYouTubeBox__inner --></div>
+	    	<!-- /.inBase --></div>
+
+
+
+			<div class="homeYouTubeBox__inner02">
+		<div class="--typeScrollFadeIn">
+		<!-- スライダーここから -->
+		<div class="sliderBox--typeBasic">
+		<!-- Slider全体のコンテナ -->
+		<div class="swiper">
+		    <!-- Sliderの内包コンテナ -->
+		    <div class="swiper-wrapper">
+		        <!-- Slideさせたいコンテンツ -->
+			<div class="swiper-slide">
+				<div class="slide">
+					<div class="youtubeBox"><iframe width="560" height="315" src="https://www.youtube.com/embed/XCqLMRMBB4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><!-- /.youtubeBox --></div>
+				<!-- /.slide --></div>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<div class="slide">
+					<div class="youtubeBox"><iframe width="560" height="315" src="https://www.youtube.com/embed/XCqLMRMBB4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><!-- /.youtubeBox --></div>
+				<!-- /.slide --></div>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<div class="slide">
+					<div class="youtubeBox"><iframe width="560" height="315" src="https://www.youtube.com/embed/XCqLMRMBB4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><!-- /.youtubeBox --></div>
+				<!-- /.slide --></div>
+			<!-- /.swiper-slide --></div>
+		    <!-- /.swiper-wrapper --></div>
+		    <!-- ナビゲーションボタン（※省略可） -->
+
+		<!-- /.swiper --></div>
+		<!-- Sliderここまで -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		<!-- /.sliderBox--typeBasic --></div>
+		<!-- スライダーここまで -->
+
+		<!-- /.--typeScrollFadeIn --></div>
+
+
+
+	    		<!-- /.homeYouTubeBox__inner --></div>
+
+
+
+
+    	<!-- /.homeYouTubeBox --></div>
+        
+	<!-- /#contents --></div>
+
+	
+	<footer id="footer">
+	  <div class="footer__contactBox">
+
+					<div class="--typeScrollLine --type04 sM">
+						<h3 class="sectionTitle--type01 tC"><small>お問い合わせ</small><b>CONTACT</b></h3>
+	    		<!-- /.--typeScrollLine --></div>
+
+
+
+		<div class="--typeScrollFadeIn sM-pc">
+		  <div class="inBase clearfix">
+				<div class="row">
+				    <div class="col-12 col-sm-6"><a href="recruit.html"><span>メールお問い合わせ</span></a></div>
+				    <div class="col-12 col-sm-6"><a href="https://www.benz-kyoto.jp/"><span>LINEお問い合わせ</span></a></div>
+				<!-- /.row --></div>
+		  <!-- /.inBase --></div>
+	  <!-- /.--typeScrollFadeIn --></div>
+		<!-- /.footer__contactBox --></div>
+
+
+		<!-- スライダーここから -->
+		<div class="sliderBox--typeFlow">
+
+		    <!-- Slider全体のコンテナ -->
+		    <div class="swiper">
+		      <!-- Sliderの内包コンテナ -->
+		      <div class="swiper-wrapper">
+		        <!-- Slideさせたいコンテンツ -->
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow01.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow02.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow03.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow05.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow06.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow07.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow08.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+			<div class="swiper-slide">
+				<figure><img src="img/common/imgBottomFlow09.jpg" alt=""></figure>
+			<!-- /.swiper-slide --></div>
+		      </div><!-- /swiper-wrapper -->
+		    </div><!-- /swiper -->
+		<!-- /.sliderBox--typeFlow --></div>
+		<!-- スライダーここまで -->
+
+		<div class="footer__information">
+			<div class="inBase clearfix">
+	        	<div class="row">
+	            	<div class="col-12 col-sm-5 sM">
+	            		<p class="footer__information__siteTitle"><img src="img/common/siteTitle_w.svg" alt="MBworks" /></p>
+	            		<p class="footer__information__sentence">
+	            			<b>TEL：075-201-4559</b><br>
+										<span>住所：</span>〒612-8495　<br class="hidden-pc">京都府京都市伏見区久我森の宮町15-10
+	            		</p>
+	            		<p class="footer__information__sentence">
+										営業時間：9:00～18:00<br>
+										定休日：第二、第四土曜日・日曜日、祝日
+	            		</p>
+	            		<ul class="footer__information__sns">
+	            			<li><a href="https://www.instagram.com/mbworks_ig/" target="_blank"><img src="img/common/iconInstagram.png" alt="MBworks Instagram" /></a></li>
+	            			<li><a href="https://www.facebook.com/people/%E4%BA%AC%E9%83%BD%E3%81%AE%E3%83%99%E3%83%B3%E3%83%84%E5%B0%82%E9%96%80-MBworks/100057332594522/" target="_blank"><img src="img/common/iconFacebook.png" alt="MBworks Facebook" /></a></li>
+	            		</ul>
+	                <!-- /.col --></div>
+	            	<div class="col-12 col-sm-7">
+	            		<div class="googleMapBox">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1635.4403937107456!2d135.72568230821636!3d34.934526645908264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600105bd15ea90ab%3A0xd50710ae80e41084!2zTUJ3b3JrcyDjg5njg7Pjg4Tkv67nkIbjgIHjgqvjgrnjgr_jg6A!5e0!3m2!1sja!2sjp!4v1686569000383!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	                	<!-- /.googleMapBox --></div>
+	                <!-- /.col --></div>
+	            <!-- /.row --></div>
+			<!-- /.inBase --></div>
+		<!-- /.footer__information --></div>
+
+		<div class="footer__naviBox">
+			<div class="inBase clearfix">
+	        <ul class="footer__naviBox__sns">
+	          <li><a href="https://www.instagram.com/mbworks_ig/" target="_blank"><img src="img/common/iconInstagram.png" alt="MBworks Instagram" /></a></li>
+	           <li><a href="https://www.facebook.com/people/%E4%BA%AC%E9%83%BD%E3%81%AE%E3%83%99%E3%83%B3%E3%83%84%E5%B0%82%E9%96%80-MBworks/100057332594522/" target="_blank"><img src="img/common/iconFacebook.png" alt="MBworks Facebook" /></a></li>
+	        </ul>
+				<div class="footer__navi">
+					<ul>
+						<li><a href="<?php echo home_url(); ?>/aboutus">ABOUT US</a></li>
+						<li><a href="<?php echo home_url(); ?>/works">WORKS</a></li>
+						<li><a href="<?php echo home_url(); ?>/culture">CULTURE</a></li>
+						<li><a href="<?php echo home_url(); ?>/benefits">BENEFITS</a></li>
+						<li><a href="<?php echo home_url(); ?>/interview">INTERVIEW</a></li>
+					</ul>
+					<ul>
+						<li><a href="<?php echo home_url(); ?>/message">MESSAGE</a></li>
+						<li><a href="<?php echo home_url(); ?>/recruit">GUIDELINE</a></li>
+						<li><a href="<?php echo home_url(); ?>/company">COMPANY</a></li>
+						<li><a href="<?php echo home_url(); ?>/qa">Q&A</a></li>
+					</ul>
+				<!-- /.footer__navi --></div>
+				<small class="copyright">Copyright &copy; MBworks. All Rights Reserved.</small>
+			<!-- /.inBase --></div>
+		<!-- /.footer__naviBox --></div>
+
+	<!-- /#footer --></footer>
+
+	<p id="btnRise"><a href="#wrapper"><i class="icon-arrow-up"></i></a></p>
+        
+	  
+	<div id="btnTelEmpty"></div>
+    
+    
+	<div id="btnPageBottom">
+	        <div class="btnPageBottom--btn btnPageBottom--type01">
+	        	<div class="btnPageBottom--type01__inner">
+		            <a href="tel:0752014559">TEL</a>
+		            <a href="#">エントリー</a>
+		            <a href="#">LINE</a>
+	            <!-- /.btnPageBottom--type01__inner --></div>
+	        <!-- /.btnPageBottom--btn --></div>
+	<!-- /#btnPageBottom --></div>
+
+	<div class="sideBannerBox">
+    		<div class="sideBannerBox__banner">
+			<a href="<?php echo home_url(); ?>/benefits">
+		                <span>福利厚生</span>
+			</a>
+		<!-- /.sideBanner --></div>
+    		<div class="sideBannerBox__banner">
+			<a href="<?php echo home_url(); ?>/recruit">
+	                	<span>募集要項</span>
+	     		</a>
+		<!-- /.sideBanner --></div>
+	<!-- /.sideBannerBox --></div>
+
+<!-- /#wrapper --></div>
+
+</body>
+</html>
+
+<script data-main="js/main" src="js/require.js"></script>

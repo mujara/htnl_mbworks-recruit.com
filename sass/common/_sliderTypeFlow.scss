@@ -1,0 +1,56 @@
+@use "../_setting" as s;
+
+.sliderBox--typeFlow {
+	display:none;
+	@include s.media(m){
+		display:block;
+	}
+  &__image {
+	position: relative;
+	overflow: hidden;
+	margin-bottom:1em;
+	border-radius: 4px;
+	img{
+	    width: 100%;
+	}
+  }
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+            transition-timing-function: linear !important;
+  }
+  .swiper-slide {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .slide {
+    	overflow: hidden;
+      	width: 24rem;
+	-webkit-transition: all 0.5s 0s ease;
+	transition: all 0.5s 0s ease;
+	@include s.media(m){
+		width: 36rem;
+	}
+  }
+	.swiper:hover .slide:not(:hover) {
+		@include s.media(m){
+			opacity: 0.3;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
